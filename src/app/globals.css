@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #080808;
+  --foreground: #fafafa;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Selection */
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: white;
+}
+
+/* Grid background pattern utility */
+.bg-grid {
+  background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effects */
+.glow-indigo {
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.2);
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.2s ease;
+}
+.card-hover:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.2), 0 4px 20px rgba(0,0,0,0.4);
+  transform: translateY(-2px);
+}
+
+/* Tag pill */
+.tag {
+  @apply text-xs font-medium px-2.5 py-1 rounded-full;
+}
+
+/* Prose for blog */
+.prose-dark {
+  color: #d4d4d8;
+}
+.prose-dark h1, .prose-dark h2, .prose-dark h3 {
+  color: #fafafa;
+}
+.prose-dark code {
+  background: #1a1a1a;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+/* Noise texture overlay */
+.noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
