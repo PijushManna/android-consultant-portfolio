@@ -58,8 +58,8 @@ export default function ServicesPage() {
           {SERVICES.map((service, i) => {
             const Icon = ICON_MAP[service.icon] || Smartphone;
             return (
-              <AnimatedSection key={service.id} delay={i * 0.05} id={service.id}>
-                <div className="p-6 sm:p-8 rounded-2xl border border-border bg-surface hover:border-border-hover transition-all">
+              <AnimatedSection key={service.id} delay={i * 0.05}>
+                <div id={service.id} className="p-6 sm:p-8 rounded-2xl border border-border bg-surface hover:border-border-hover transition-all">
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {/* Left: Main info */}
                     <div className="lg:col-span-2">
