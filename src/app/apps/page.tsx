@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { ExternalLink, Github, Star, Download } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import Badge from "@/components/ui/Badge";

@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   const featured = BLOG_POSTS.filter((p) => p.featured);
-  const rest = BLOG_POSTS.filter((p) => !p.featured);
 
   return (
     <div className="pt-24 pb-20">
