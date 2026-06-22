@@ -33,8 +33,8 @@ export default function CaseStudiesPage() {
         {/* Case Studies */}
         <div className="space-y-16">
           {CASE_STUDIES.map((cs, i) => (
-            <AnimatedSection key={cs.id} delay={i * 0.1} id={cs.id}>
-              <article className="relative">
+            <AnimatedSection key={cs.id} delay={i * 0.1}>
+              <article className="relative" id={cs.id}>
                 {/* Number */}
                 <div className="flex items-center gap-4 mb-6">
                   <span className="text-5xl font-black text-border/60 select-none">
